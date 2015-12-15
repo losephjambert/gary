@@ -10,8 +10,10 @@ a sass-powered flexbox grid for tomorrow
 ##about
 **planetary** is a flexbox-based grid that uses the SASS preprocessor and the wonders of autoprefixing to create a semantic, customizable, layout module that super-charges your css and keeps your html clean.
 
-**planetary** only works on contemporary browsers and does not support i.e.– 8, 9, 10, and sometimes 11.
+it only works on contemporary browsers and does not support i.e.– 8, 9, 10, and sometimes 11.
 
-developed as a school project and issued under the MIT license, please feel free to use and re-use **planetary** to make it better :)
+developed as a school project, please feel free to fork **planetary** to make it better :)
+
+issued under the MIT license
 
 made with &#x1F60D;
