@@ -1,0 +1,46 @@
+ /*——————————————————
+ SEMANTIC GRID
+ ——————————————————*/
+
+/*------------Site Wrap------------*/
+/*Create a site-wrap your site needs, but the grid is not reliant upon a site wrap*/
+ @mixin site-wrap($width, $max-width){
+ 	width:(0% + $width);
+ 	width:(0vw + $width);
+ 	max-width:(0rem + $max-width);
+ 	margin-left:auto;
+ 	margin-right:auto;
+ 	position: relative;
+ }
+
+/*-----------Mixin Grid------------*/
+/*This grid uses SASS mixins to establish a grid system*/
+/*Establish a Container that will hold either rows or columns, depending on how you choose to display it*/
+@mixin flex-row ($width, $justify, $align){ /*creates a container utilising flex row*/
+	display: flex;
+	flex-flow:row wrap;
+	width:(0% + $width);
+	justify-content:$justify;
+	align-items:$align;
+}
+
+@mixin flex-column ($width, $justify, $align){/*creates a container utilising flex column*/
+	display: flex;
+	flex-flow:column wrap;
+	width:(0% + $width);
+	justify-content:$justify;
+	align-items:$align;
+}
+
+/*Create a Flex Item that will display as a row or column, depending on the parent element's display setting*/
+/*creates a column based on percentage dimensions*/
+@mixin item-percent ($grow, $shrink, $col, $width){
+	flex: ($grow) ($shrink) percentage($col/$width);
+}
+
+/*creates a column based on pixel dimensions*/
+@mixin item-pixel ($grow, $shrink, $basis){
+	flex: ($grow) ($shrink) (0px + $basis);
+}
+
+
