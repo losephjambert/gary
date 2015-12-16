@@ -1,4 +1,4 @@
-# planetary
+# gary
 a sass-powered flexbox grid for tomorrow
 
 ##directions
@@ -8,11 +8,11 @@ a sass-powered flexbox grid for tomorrow
 4. mixin the containers and columns/rows where you see fit
 
 ##about
-**planetary** is a flexbox-based grid that uses the SASS preprocessor and the wonders of autoprefixing to create a semantic, customizable, layout module that super-charges your css and keeps your html clean.
+**gary** is a flexbox-based grid that uses SASS preprocessing and the wonders of autoprefixing to create a semantic, customizable, layout module that super-charges your css and keeps your html clean.
 
 it only works on contemporary browsers and does not support i.e.– 8, 9, 10, and sometimes 11.
 
-developed as a school project, please feel free to fork **planetary** to make it better :)
+developed as a school project, please feel free to fork **gary** to make it better :)
 
 issued under the MIT license
 
