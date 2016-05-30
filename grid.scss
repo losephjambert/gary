@@ -1,46 +1,41 @@
- /*——————————————————
- SEMANTIC GRID
- ——————————————————*/
+//Hi, I'm Gary
 
-/*------------Site Wrap------------*/
-/*Create a site-wrap your site needs, but the grid is not reliant upon a site wrap*/
- @mixin site-wrap($width, $max-width){
+//Go to ---> https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+//to learn more about Flexbox properties and how these mixins use them.
+
+//Also, go to ----> https://davidwalsh.name/goodbye-vendor-prefixes
+//For some good thoughts about prefixing and ways around the crapshoot of writing all that stuff out
+
+//This grid depends on a prefixer right now,
+//but I have plans to add all the prefixes in here
+//when I finish school so you don't have to :)
+
+
+
+//OPTIONAL WRAPPER
+//Flexbox doesn't need a wrapper so to speak, but it's always a good idea to set a max-width for your website
+ @mixin wrap($width, $max-width){
  	width:(0% + $width);
  	width:(0vw + $width);
  	max-width:(0rem + $max-width);
  	margin-left:auto;
  	margin-right:auto;
- 	position: relative;
- }
+ 	position: relative;}
 
-/*-----------Mixin Grid------------*/
-/*This grid uses SASS mixins to establish a grid system*/
-/*Establish a Container that will hold either rows or columns, depending on how you choose to display it*/
-@mixin flex-row ($width, $justify, $align){ /*creates a container utilising flex row*/
+//MIXIN GRID
+//Create either a row or a column and set some variables
+@mixin parent($colRow, $wrap, $width, $justify, $align){ 
 	display: flex;
-	flex-flow:row wrap;
+	flex-flow:$colRow $wrap;
 	width:(0% + $width);
 	justify-content:$justify;
-	align-items:$align;
-}
+	align-items:$align;}
 
-@mixin flex-column ($width, $justify, $align){/*creates a container utilising flex column*/
-	display: flex;
-	flex-flow:column wrap;
-	width:(0% + $width);
-	justify-content:$justify;
-	align-items:$align;
-}
+//Create flex children to live inside their flex parents. 
+//The children will display as rows or columns depending on their parents' status
+//Additionally, you can declare children as percentages or px/em/rem values. Very neat!
+@mixin child-percent ($grow, $shrink, $col, $width){
+	flex: ($grow) ($shrink) percentage($col/$width);}
 
-/*Create a Flex Item that will display as a row or column, depending on the parent element's display setting*/
-/*creates a column based on percentage dimensions*/
-@mixin item-percent ($grow, $shrink, $col, $width){
-	flex: ($grow) ($shrink) percentage($col/$width);
-}
-
-/*creates a column based on pixel dimensions*/
-@mixin item-pixel ($grow, $shrink, $basis){
-	flex: ($grow) ($shrink) (0px + $basis);
-}
-
-
+@mixin child-pixel ($grow, $shrink, $basis){
+	flex: ($grow) ($shrink) (0px + $basis);}
