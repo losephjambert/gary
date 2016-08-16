@@ -2,10 +2,11 @@
 a mixin flexbox grid
 
 ##directions
-1. install [SASS](http://sass-lang.com/install) and be sure to use an autoprefixer of your choice (i really love [codekit](https://incident57.com/codekit/))
+1. install [SASS](http://sass-lang.com/install) and be sure to use an autoprefixer of your choice (i really love [codekit](https://incident57.com/codekit/)); grunt is also very nice
 2. include grid.scss in your main.scss stylesheet
-3. give your html elements names that make sense to you
-4. mixin the containers and columns/rows where you see fit
+3. define a parent container with the .parent class
+4. declare it as a row or column using the provided mixins
+5. style its children as you see fit using either percentage-based widths or pixel-/rem-based widths
 
 ##about
 **gary** is a flexbox-based grid that uses SASS preprocessing and the wonders of autoprefixing to create a semantic, customizable, layout module. i like to use it for simple layouts.
