@@ -1,28 +1,9 @@
-//Hi, I'm Gary
-
-//Go to ---> https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-//to learn more about Flexbox properties and how these mixins use them.
-
-<<<<<<< Updated upstream
-//Also, go to ----> https://davidwalsh.name/goodbye-vendor-prefixes
-//For some good thoughts about prefixing and ways around the crapshoot of writing all that stuff out
-
-//This grid depends on a prefixer right now,
-//but I have plans to add all the prefixes in here
-//when I finish school so you don't have to :)
-=======
-//Also, go to ---> https://davidwalsh.name/goodbye-vendor-prefixes
-//For some good thoughts about prefixing and ways around the crapshoot of writing all that stuff out
-
-//Don't forget to prefix!
+//Hi, I'm GARY
 
 //UTILITY CLASSES
 //Define the Flex parent element with the .parent class to avoid repeating the flex declaration
 .parent{
 	display:flex;}
->>>>>>> Stashed changes
-
-
 
 //OPTIONAL WRAPPER
 //Flexbox doesn't need a wrapper so to speak, but it's always a good idea to set a max-width for your website
@@ -36,7 +17,6 @@
 
 //MIXIN GRID
 //Create either a row or a column and set some variables
-<<<<<<< Updated upstream
 @mixin parent($colRow, $wrap, $width, $justify, $align){ 
 	display: flex;
 	flex-flow:$colRow $wrap;
@@ -46,7 +26,6 @@
 
 //Create flex children to live inside their flex parents. 
 //The children will display as rows or columns depending on their parents' status
-=======
 @mixin row($wrap, $width, $justify, $align){ 
 	display: flex;
 	flex-flow:row $wrap;
@@ -63,14 +42,9 @@
 
 //Create flex children to live inside their flex parents. 
 //The children will display as rows or columns depending on their parents' column or row declaration
->>>>>>> Stashed changes
 //Additionally, you can declare children as percentages or px/em/rem values. Very neat!
 @mixin child-percent ($grow, $shrink, $col, $width){
 	flex: ($grow) ($shrink) percentage($col/$width);}
 
 @mixin child-pixel ($grow, $shrink, $basis){
-<<<<<<< Updated upstream
-	flex: ($grow) ($shrink) (0px + $basis);}
-=======
 	flex: ($grow) ($shrink) ($basis);}
->>>>>>> Stashed changes
